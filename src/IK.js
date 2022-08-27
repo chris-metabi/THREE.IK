@@ -10,6 +10,7 @@ class IK {
    *
    */
   constructor() {
+    console.log("Constructing three IK!!!!");
     this.chains = [];
     this._needsRecalculated = true;
 
