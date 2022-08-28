@@ -154,7 +154,7 @@ class IKJoint {
    */
   _worldToLocalDirection(direction) {
     if (this.bone.parent) {
-      const inverseParent = new Matrix4().copy(this.bone.parent.matrixWorld).invert();
+      const inverseParent = new Matrix4().copy(this.bone.parent.matrixWorld).inverse();//.invert();
       direction.transformDirection(inverseParent);
     }
     return direction;
@@ -171,7 +171,7 @@ class IKJoint {
 
     if (parent) {
       this._updateMatrixWorld();
-      let inverseParent = new Matrix4().copy(this.bone.parent.matrixWorld).invert();
+      let inverseParent = new Matrix4().copy(this.bone.parent.matrixWorld).inverse();//.invert();
       transformPoint(position, inverseParent, position);
       this.bone.position.copy(position);
 
