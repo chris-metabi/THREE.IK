@@ -37,6 +37,6 @@
   "peerDependencies": {
     "three": "*"
   },
-  "repository": "https://github.com/jsantell/THREE.IK",
+  "repository": "https://github.com/chris-metabi/THREE.IK",
   "dependencies": {}
 }
